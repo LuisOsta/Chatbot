@@ -54,18 +54,23 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
-      <Launcher
-        agentProfile={{
-          teamName: "CS4395 Chatbot",
-          imageUrl:
-            "https://a.slack-edge.com/66f9/img/avatars-teams/ava_0001-34.png",
-        }}
-        onMessageWasSent={handleMessageSent}
-        messageList={messageList}
-        showEmoji={false}
-        isOpen={isOpen}
-        handleClick={handleOpen}
-      />
+      <div>
+        <div className="launcher">
+          <Launcher
+            agentProfile={{
+              teamName: "CS4395 Chatbot",
+              imageUrl:
+                "https://a.slack-edge.com/66f9/img/avatars-teams/ava_0001-34.png",
+            }}
+            onMessageWasSent={handleMessageSent}
+            messageList={messageList}
+            showEmoji={false}
+            isOpen={isOpen}
+            handleClick={handleOpen}
+            className="launcher"
+          />
+        </div>
+      </div>
     </div>
   );
 }
