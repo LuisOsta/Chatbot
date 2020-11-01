@@ -23,8 +23,12 @@ const initialValues = [
 ];
 
 function App() {
+  const [isOpen, setOpen] = useState(true);
   const [messageList, setMessageList] = useState(initialValues);
 
+  const handleOpen = () => {
+    setOpen(!isOpen);
+  };
   const handleMessageSent = async (message) => {
     const { data } = await axios.post("/chatbot/response", {
       data: { text: message.data.text },
@@ -59,7 +63,8 @@ function App() {
         onMessageWasSent={handleMessageSent}
         messageList={messageList}
         showEmoji={false}
-        isOpen={true}
+        isOpen={isOpen}
+        onClick={handleOpen}
       />
     </div>
   );
