@@ -4,18 +4,11 @@ Module document
 """
 
 
-def chatbot_response(msg: str):
-    """
-    Docstring
-    """
-    return msg
-
-
-def send_chatbot_response(question: str):
+def send_chatbot_response(question: str, get_chatbot_response):
     """
         Docstring
     """
-    response = chatbot_response(question)
+    response = get_chatbot_response(question)
     print("Chatbot Response: ", response)
 
 
@@ -23,7 +16,7 @@ def send_starter_message():
     """
     Docstring
     """
-    print("Welcome! Here you can ask whatever questions you want about finance")
+    print("Welcome! Here you can ask whatever questions you want about finance (type quit to exit)")
     print("Ask any question you want.")
 
 
@@ -35,7 +28,7 @@ def wait_for_user_input():
     return question
 
 
-def initialize_chat():
+def initialize_chat(get_chatbot_response):
     """
         Docstring
     """
@@ -43,4 +36,8 @@ def initialize_chat():
 
     while True:
         question = wait_for_user_input()
-        send_chatbot_response(question)
+
+        if question.lower() == "quit":
+            break
+
+        send_chatbot_response(question, get_chatbot_response)

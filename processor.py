@@ -2,7 +2,6 @@
 Imports
 """
 import json
-import os.path
 import pickle
 import numpy as np
 from nltk.stem.lancaster import LancasterStemmer
@@ -16,31 +15,28 @@ def process_raw_data(filepath):
     Docstring
     """
 
-    if(os.path.isfile("./data/data.pickle")):
-        return [], [], [], []
-    else:
-        words = []
-        labels = []
-        docs_x = []
-        docs_y = []
-        with open(filepath) as file:
-            intents = json.load(file)["intents"]
+    words = []
+    labels = []
+    docs_x = []
+    docs_y = []
+    with open(filepath) as file:
+        intents = json.load(file)["intents"]
 
-        for intent in intents:
-            for pattern in intent["patterns"]:
-                word_tokens = word_tokenize(pattern)
-                words.extend(word_tokens)
+    for intent in intents:
+        for pattern in intent["patterns"]:
+            word_tokens = word_tokenize(pattern)
+            words.extend(word_tokens)
 
-                docs_x.append(word_tokens)
-                docs_y.append(intent['tag'])
-            if intent['tag'] not in labels:
-                labels.append(intent['tag'])
+            docs_x.append(word_tokens)
+            docs_y.append(intent['tag'])
+        if intent['tag'] not in labels:
+            labels.append(intent['tag'])
 
-        stemmed_words = sorted(
-            list(set([stemmer.stem(w.lower()) for w in words if w not in "?"])))
-        sorted_labels = sorted(labels)
+    stemmed_words = sorted(
+        list(set([stemmer.stem(w.lower()) for w in words if w not in "?"])))
+    sorted_labels = sorted(labels)
 
-        return docs_x, docs_y, stemmed_words, sorted_labels
+    return docs_x, docs_y, stemmed_words, sorted_labels
 
 
 # initialize_chat()
@@ -53,7 +49,7 @@ def create_training_data(docs_x, docs_y, stemmed_words, labels):
     try:
         with open("./data/data.pickle", "rb") as file:
             training, output = pickle.load(file)
-            return training, output
+            return training, output, stemmed_words, labels
     except:
         training = []
         output = []
