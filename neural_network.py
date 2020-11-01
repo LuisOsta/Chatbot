@@ -5,7 +5,7 @@ import json
 import random
 import os.path
 import tflearn
-import re
+import spacy
 import numpy as np
 from nltk.stem.lancaster import LancasterStemmer
 from nltk import word_tokenize
@@ -13,6 +13,8 @@ from nltk import word_tokenize
 stemmer = LancasterStemmer()
 
 UNCERTAINTY_CUT_OFF = .4
+
+nlp = spacy.load('en_core_web_sm')
 
 
 def create_network(inputs, output):
@@ -88,12 +90,13 @@ def create_chatbot(chatbot_model, labels, words, data_file_path):
             [create_bag_of_words(question, words)])
         max_index = np.argmax(prediction)
         if prediction[0][max_index] <= UNCERTAINTY_CUT_OFF:
-            return "I don't think I understand, can you try again or ask another question?", user_name
+            return "I don't think I understand, can you try again or ask another question?", \
+                user_name
 
         tag = labels[max_index]
         if tag == "introduction":
             new_name = get_name_from_introduction(question)
-            return get_answer_from_tag(tag, data_file_path) + ", " + user_name, new_name
+            return get_answer_from_tag(tag, data_file_path) + ", " + new_name, new_name
         else:
             return get_answer_from_tag(tag, data_file_path), user_name
 
@@ -101,8 +104,12 @@ def create_chatbot(chatbot_model, labels, words, data_file_path):
 
 
 def get_name_from_introduction(text):
-    name = re.search('[A-Z][a-z]+ [A-Z][a-z]+', text)
-    if name:
-        return name.group(0)
-    else:
-        return ""
+    """
+    Docstring
+    """
+    document = nlp(text)
+    for entity in document.ents:
+        if entity.label_:
+            return entity.text
+
+    return ""
