@@ -9,7 +9,7 @@ import spacy
 import numpy as np
 from nltk.stem.lancaster import LancasterStemmer
 from nltk import word_tokenize
-
+from user_model import get_weighted_predictions, update_user_preference
 stemmer = LancasterStemmer()
 
 UNCERTAINTY_CUT_OFF = .4
@@ -88,12 +88,16 @@ def create_chatbot(chatbot_model, labels, words, data_file_path):
     def get_chatbot_response(question, user_name):
         prediction = chatbot_model.predict(
             [create_bag_of_words(question, words)])
-        max_index = np.argmax(prediction)
-        if prediction[0][max_index] <= UNCERTAINTY_CUT_OFF:
+
+        weighted_prediction = get_weighted_predictions(prediction, user_name)
+        max_index = np.argmax(weighted_prediction)
+
+        if weighted_prediction[0][max_index] <= UNCERTAINTY_CUT_OFF:
             return "I don't think I understand, can you try again or ask another question?", \
                 user_name
 
         tag = labels[max_index]
+        update_user_preference(user_name, max_index)
         if tag == "introduction":
             new_name = get_name_from_introduction(question)
             return get_answer_from_tag(tag, data_file_path) + ", " + new_name, new_name
