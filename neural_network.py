@@ -17,7 +17,6 @@ def create_network(inputs, output):
     """
         Docstring
     """
-    tf.compat.v1.reset_default_graph()
     prep_network = tflearn.input_data(shape=[None, len(inputs[0])])
     prep_network = tflearn.fully_connected(prep_network, 8)
     prep_network = tflearn.fully_connected(prep_network, 8)
