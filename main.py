@@ -12,7 +12,7 @@ from neural_network import create_chatbot, create_model
 from chat_gui import initialize_chat
 from processor import process_raw_data, create_training_data
 
-app = Flask(__name__, static_folder="client/build/")
+application = Flask(__name__, static_folder="client/build/")
 logging.getLogger('tflearn').setLevel(logging.CRITICAL)
 logging.getLogger('tensorflow').setLevel(logging.CRITICAL)
 
@@ -30,19 +30,19 @@ get_chatbot_response = create_chatbot(
     model, labels, words, INTENTS_FILE_PATH)
 
 
-@app.route("/", defaults={'path': ''})
-@app.route('/<path:path>')
+@application.route("/", defaults={'path': ''})
+@application.route('/<path:path>')
 def serve_react(path):
     """
         Docstring
     """
-    if path != "" and os.path.exists(app.static_folder + '/' + path):
-        return send_from_directory(app.static_folder, path)
+    if path != "" and os.path.exists(application.static_folder + '/' + path):
+        return send_from_directory(application.static_folder, path)
     else:
-        return send_from_directory(app.static_folder, 'index.html')
+        return send_from_directory(application.static_folder, 'index.html')
 
 
-@app.route("/chatbot/response", methods=["POST"])
+@application.route("/chatbot/response", methods=["POST"])
 def send_chatbot_response():
     """
         Docstring
@@ -59,4 +59,4 @@ if __name__ == "__main__":
     subprocess.call('clear')
     port = int(os.environ.get("PORT"), 5000)
     print(port)
-    app.run(port=port, threaded=True, debug=True, host="0.0.0.0")
+    application.run(port=port, threaded=True, debug=True, host="0.0.0.0")
