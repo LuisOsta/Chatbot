@@ -1,15 +1,13 @@
 """
 Imports
 """
-import json
-from flask import Flask, send_from_directory, request
 import os
 import logging
 import subprocess
+from flask import Flask, send_from_directory, request
 
 from werkzeug.exceptions import BadRequest
 from neural_network import create_chatbot, create_model
-from chat_gui import initialize_chat
 from processor import process_raw_data, create_training_data
 
 application = Flask(__name__, static_folder="client/build/")
@@ -59,4 +57,4 @@ if __name__ == "__main__":
     subprocess.call('clear')
     port = int(os.environ.get("PORT"), 5000)
     print(port)
-    application.run(port=port, threaded=True, debug=True, host="0.0.0.0")
+    application.run(port=port, threaded=True, debug=True)
