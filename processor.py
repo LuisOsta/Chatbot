@@ -50,7 +50,7 @@ def create_training_data(docs_x, docs_y, stemmed_words, labels):
         with open("./data/data.pickle", "rb") as file:
             training, output = pickle.load(file)
             return training, output, stemmed_words, labels
-    except:
+    except:  # pylint: disable=W0702
         training = []
         output = []
 

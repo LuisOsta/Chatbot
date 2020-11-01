@@ -64,12 +64,15 @@ def create_bag_of_words(sentence, words):
 
 
 def get_answer_from_tag(tag: str, data_file_path):
+    """
+        Docstring
+    """
     with open(data_file_path) as file:
         intents = json.load(file)["intents"]
 
-    for tg in intents:
-        if tg['tag'] == tag:
-            responses = tg['responses']
+    for intent in intents:
+        if intent['tag'] == tag:
+            responses = intent['responses']
             return random.choice(responses)
 
     return "No answer found, please try another question."
