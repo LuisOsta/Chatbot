@@ -7,13 +7,13 @@ verify_ssl = true
 autopep8 = "*"
 
 [packages]
+flask = "*"
+gunicorn = "*"
 nltk = "*"
 numpy = "*"
 pylint = "*"
-tensorflow = "==1.15"
+tensorflow = "https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.15-cp27-none-linux_x86_64.whl"
 tflearn = "*"
-flask = "*"
-gunicorn = "*"
 
 [requires]
 python_version = "3.6"
