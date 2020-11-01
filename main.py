@@ -54,5 +54,4 @@ def send_chatbot_response():
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT"), 5000)
-    print(port)
     application.run(port=port, threaded=True, debug=True)
