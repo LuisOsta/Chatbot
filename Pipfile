@@ -7,8 +7,11 @@ verify_ssl = true
 autopep8 = "*"
 
 [packages]
+nltk = "*"
 numpy = "*"
 pylint = "*"
+tensorflow = "==1.15"
+tflearn = "*"
 
 [requires]
-python_version = "3.8"
+python_version = "3.6"

@@ -1,0 +1,286 @@
+{
+  "intents": [
+    {
+      "tag": "individual_retirement",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "index_fund",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "initial_public_offering",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "cryptocurrencies",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "initial_coin_offering",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "blue_chip",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "estate_planning",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "finra",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "market_cap",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "penny_stocks",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "price_to_earnings",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "recession",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "time_horizon",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "brokerage",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "junk_bond",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "unions",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "co-op",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "employee_stock_options",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "gig_economy",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "garnishment",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "credit_cards",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "401k",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "mortgage",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "financial_engineering",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "robo_advisors",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "social_security",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "living_standard",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "wealth",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "economy",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "unemployment",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "investing_time",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "rollover",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "stock_volume",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "preffed stock",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "hedge_funds",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "trust_funds",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "asset_allocation",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "fiduciary_duty",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "short_selling",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "credit_bureau",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "personal_budget",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "savings",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "emergency",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "debit_card",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "certified_public_accountant",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "small_business",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "small_business_admin",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    }
+  ]
+}

@@ -1,0 +1,415 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day",
+        "Whats up"
+      ],
+      "responses": [
+        "Hello!",
+        "Good to see you again!",
+        "Hi there, how can I help?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "cya",
+        "See you later",
+        "Goodbye",
+        "I am Leaving",
+        "Have a Good day"
+      ],
+      "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+      "context_set": ""
+    },
+    {
+      "tag": "securities_exchange_commission",
+      "patterns": [
+        "What is the security exchange commission?",
+        "What is the SEC?",
+        "What does the SEC do?",
+        "What does the security exchange commission do?",
+        "Why does the SEC exist?"
+      ],
+      "responses": [
+        "The mission of the SEC is to protect investors; maintain fair, orderly, and efficient markets; and facilitate capital formation. The SEC strives to promote a market environment that is worthy of the public's trust.",
+        "The U.S. Securities and Exchange Commission is a large independent agency of the United States federal government that was created following the stock market crash in the 1920s to protect investors and the national banking system.",
+        "The SEC purpose is to avoid situations that caused The Great Depression, The Great Recession and other crashes caused by misbehavior by banks and other financial instituitions."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "stocks",
+      "patterns": [
+        "What are stocks?",
+        "What is the point of stocks?",
+        "How do stocks work?",
+        "What makes stocks valuable"
+      ],
+      "responses": [
+        " A single share of the stock represents fractional ownership of the corporation in proportion to the total number of shares.",
+        "A stock if a part of ownership of a publicly trader company. So as the value of the company rises, so does the value of the stock.",
+        "Stocks are a invesment device that goes up in value as the company's value goes up."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "income",
+      "patterns": [
+        "What is income",
+        "Can invesments be considered income?",
+        "What defines income?",
+        "What is considered income?"
+      ],
+      "responses": [
+        "money received, especially on a regular basis, for work or through investments.",
+        "Income is usually considered the payments received through a job",
+        "In addition to various forms of investments, most people's main income is through their job"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "exchange_traded_funds",
+      "patterns": [
+        "How is an ETF different from mutual funds?",
+        "How is an ETF different from stocks?",
+        "What is an ETF",
+        "How do ETFs work?",
+        "What makes ETFs special?"
+      ],
+      "responses": [
+        "An exchange traded fund (ETF) is a type of security that involves a collection of securities—such as stocks—that often tracks an underlying index, although they can invest in any number of industry sectors or use various strategies.",
+        "An exchange traded fund (ETF) is a basket of securities that trade on an exchange, just like a stock.",
+        "ETFs can contain all types of investments including stocks, commodities, or bonds; some offer U.S. only holdings, while others are international."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "cashflow",
+      "patterns": [
+        "What is cashflow",
+        "Why is cashflow important",
+        "Why is cashflow important to a business?",
+        "How does cashflow work?"
+      ],
+      "responses": [
+        "A cash flow is a real or virtual movement of money: a cash flow in its narrow sense is a payment, especially from one central bank account to another",
+        "A cash flow statement is a financial statement that summarizes the amount of cash and cash equivalents entering and leaving a company.",
+        "The main components of the cash flow statement are cash from operating activities, cash from investing activities, and cash from financing activities."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "gaap",
+      "patterns": [
+        "What is GAAP?",
+        "Why is GAAP important?",
+        "Who must follow GAAP?",
+        "What does GAAP stand for?"
+      ],
+      "responses": [
+        "Generally Accepted Accounting Principles is the accounting standard adopted by the U.S. Securities and Exchange Commission.",
+        "Generally accepted accounting principles (GAAP) refer to a common set of accounting principles, standards, and procedures issued by the Financial Accounting Standards Board (FASB). Public companies in the United States must follow GAAP when their accountants compile their financial statements.",
+        "GAAP helps govern the world of accounting according to general rules and guidelines. It attempts to standardize and regulate the definitions, assumptions, and methods used in accounting across all industries. GAAP covers such topics as revenue recognition, balance sheet classification, and materiality."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "earnings_per_share",
+      "patterns": [
+        "What is earnings per share?",
+        "What is a businesses EPS",
+        "What makes EPS important?",
+        "What does a company's EPS mean?"
+      ],
+      "responses": [
+        "Earnings per share (EPS) is calculated as a company's profit divided by the outstanding shares of its common stock. The resulting number serves as an indicator of a company's profitability.",
+        "EPS indicates how much money a company makes for each share of its stock, and is a widely used metric to estimate corporate value.",
+        "Earnings per share (EPS) is a company's net profit divided by the number of common shares it has outstanding. A higher EPS indicates greater value because investors will pay more for a company's shares if they think the company has higher profits relative to its share price."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "mutual_fund",
+      "patterns": [
+        "What is a mutual fund?",
+        "How is a mutual fund different from stocks?",
+        "How is a mutual fund different from ETFs?",
+        "What makes mututal funds useful?"
+      ],
+      "responses": [
+        "A mutual fund is an open-end professionally managed investment fund that pools money from many investors to purchase securities. These investors may be retail or institutional in nature.",
+        "A mutual fund is a type of investment vehicle consisting of a portfolio of stocks, bonds, or other securities.",
+        "Mutual funds give small or individual investors access to diversified, professionally managed portfolios at a low price."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "exchanges",
+      "patterns": [
+        "What is a stock exchange?",
+        "What are exchanges for?",
+        "Why are stock exchanges important?",
+        "What can you trade in stock exchanges?"
+      ],
+      "responses": [
+        "A stock exchange, securities exchange, or bourse is a facility where stockbrokers and traders can buy and sell securities, such as shares of stock, bonds, and other financial instruments.",
+        "Stock exchanges are places where stocks are traded. They allow investors to buy and sell shares of a company among each other in a regulated physical or electronic space.",
+        "Stock exchanges are secondary markets, where existing owners of shares can transact with potential buyers. It is important to understand that the corporations listed on stock markets do not buy and sell their own shares on a regular basis (companies may engage in stock buybacks or issue new shares, but these are not day-to-day operations and often occur outside of the framework of an exchange)."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "exchange_time",
+      "patterns": [
+        "At what time are stock exchanges open?",
+        "When can you trade stocks?",
+        "When can you trade securities?",
+        "When does the New York Stock Exchange open?",
+        "When does the NYSE open?"
+      ],
+      "responses": [
+        "Stock exchanges vary in opening time depending on the location. But the New York Stock Exchange's regular trading hours are 9:30 am to 4pm EST",
+        "The stock market’s regular operating hours for buying and selling stocks and other securities are 9:30 a.m. to 4 p.m. EST. However, you can technically trade many stocks after the hours set by the exchanges."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "interest",
+      "patterns": [
+        "What is interest?",
+        "What is simple interest?",
+        "What is the cost of a loan?"
+      ],
+      "responses": [
+        "Interest, in finance and economics, is payment from a borrower or deposit-taking financial institution to a lender or depositor of an amount above repayment of the principal sum, at a particular rate.",
+        "The interest rate is the amount a lender charges for the use of assets expressed as a percentage of the principal.",
+        "There are two forms of interest: Compound and Simple interest. Simple interest is a quick and easy method of calculating the interest charge on a loan. Simple interest is determined by multiplying the daily interest rate by the principal by the number of days that elapse between payments."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "compound_interest",
+      "patterns": [
+        "What makes compound interest special?",
+        "What makes compound interest different from simple interest",
+        "What is compound interest?",
+        "How does compound interest work?"
+      ],
+      "responses": [
+        "Compound interest is the addition of interest to the principal sum of a loan or deposit, or in other words, interest on interest.",
+        "Compound interest (or compounding interest) is interest calculated on the initial principal, which also includes all of the accumulated interest from previous periods on a deposit or loan.",
+        "Compound interest is calculated by multiplying the initial principal amount by one plus the annual interest rate raised to the number of compound periods minus one."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "fico",
+      "patterns": [
+        "What is FICO?",
+        "What is a FICO score",
+        "What is the purpose of a FICO score?",
+        "Why does FICO exist?"
+      ],
+      "responses": [
+        "A FICO Score is a three-digit number based on the information in your credit reports. It helps lenders determine how likely you are to repay a loan. This, in turn, affects how much you can borrow, how many months you have to repay, and how much it will cost (the interest rate).",
+        "FICO Scores help millions of people like you gain access to the credit they need to do things like get an education, buy a first home, or cover medical expenses. Even some insurance and utility companies will check FICO Scores when setting up the terms of the service.",
+        "FICO Scores are the industry standard for making accurate and fair decisions about creditworthiness. They help millions of people get the credit they need for a home, a new car, or a special purchase."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "net_worth",
+      "patterns": [
+        "What is net work",
+        "What does network mean",
+        "How does networth differ from income?"
+      ],
+      "responses": [
+        "Net worth is the value of all the non-financial and financial assets owned by an individual or institution minus the value of all its outstanding liabilities.",
+        "Net worth is a quantitative concept that measures the value of an entity and can apply to individuals, corporations, sectors, and even countries.",
+        "Net worth is calculated by subtracting all liabilities from assets. An asset is anything owned that has monetary value, while liabilities are obligations that deplete resources, such as loans, accounts payable (AP), and mortgages."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "bonds",
+      "patterns": [
+        "What are bonds?",
+        "How do bonds work?",
+        "How are bonds different from stocks?",
+        "How are bonds different from stocks?"
+      ],
+      "responses": [
+        "In finance, a bond is an instrument of indebtedness of the bond issuer to the holders. The most common types of bonds include municipal bonds and corporate bonds.",
+        "A bond is a fixed income instrument that represents a loan made by an investor to a borrower (typically corporate or governmental). A bond could be thought of as an I.O.U. between the lender and borrower that includes the details of the loan and its payments.",
+        "Bonds are units of corporate debt issued by companies and securitized as tradeable assets."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "escrow",
+      "patterns": [
+        "Why is escrow used?",
+        "What is escrow?",
+        "When is escrow used?",
+        "What's the point of escrow?"
+      ],
+      "responses": [
+        "Escrow is a legal concept describing a financial instrument whereby an asset or escrow money is held by a third party on behalf of two other parties that are in the process of completing a transaction",
+        "Escrow is the use of a third party, which holds an asset or funds before they are transferred from one party to another. Escrow is associated with real estate transactions, but it can apply to any situation where funds will pass from one party to another.",
+        "Escrow is a process used when two parties are in the process of completing a transaction, and there is uncertainty over whether one party or another will be able to fulfill their obligations. Contexts that use escrow include Internet transactions, banking, intellectual property, real estate, mergers and acquisitions, and law, and many more."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "private_equity",
+      "patterns": [
+        "What is private equity",
+        "What is the difference between private equity and other investment forms",
+        "Why is private equity popular",
+        "What is the purpose of private equity"
+      ],
+      "responses": [
+        "Private equity typically refers to investment funds, generally organized as limited partnerships, that buy and restructure companies that are not publicly traded.",
+        "Investors seek out private equity (PE) funds to earn returns that are better than what can be achieved in public equity markets.",
+        "The private equity (PE) industry is comprised of institutional investors such as pension funds, and large private-equity (PE) firms funded by accredited investors. Because private equity (PE) entails direct investment—often to gain influence or control over a company's operations—a significant capital outlay is required, which is why funds with deep pockets dominate the industry."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "retirement",
+      "patterns": [
+        "How can I retire?",
+        "What do you need to retire?",
+        "What does it mean to retire?",
+        "How much do you need to retire?"
+      ],
+      "responses": [
+        "Retirement is the withdrawal from one's position or occupation or from one's active working life. A person may also semi-retire by reducing work hours.",
+        "Most experts say your retirement income should be about 80% of your final pre-retirement salary. 3﻿ That means if you make $100,000 annually at retirement, you need at least $80,000 per year to have a comfortable lifestyle after leaving the workforce.",
+        "Your retirement savings goal hinges on a few factors, most notably how much you think you’ll spend in retirement. To estimate that, think about how your current spending might change. For example, you might have your mortgage paid off by then, but your travel spending could increase."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "annual_percentage_rate",
+      "patterns": [
+        "What's the cost of leaving a balance on a credit card?",
+        "What is APR?",
+        "How does credit card interest work",
+        "How does loan interest work?"
+      ],
+      "responses": [
+        "The term annual percentage rate of charge, corresponding sometimes to a nominal APR and sometimes to an effective APR, is the interest rate for a whole year.",
+        "The term refers to the annual rate of interest charged to borrowers and paid to investors. APR is expressed as a percentage that represents the actual yearly cost of funds over the term of a loan or income earned on an investment.",
+        "An annual percentage rate is expressed as an interest rate. It calculates what percentage of the principal you’ll pay each year by taking things such as monthly payments into account."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "asset",
+      "patterns": [
+        "What is considered an asset?",
+        "How do assets work?",
+        "What are the tax benefits of assets?"
+      ],
+      "responses": [
+        "In financial accounting, an asset is any resource owned by a business or an economic entity.",
+        "An asset can be anything from buildings to art pieces. Its anything a business or person can produce (or has) a positive economic value",
+        "An asset is anything of value or a resource of value that can be converted into cash. Individuals, companies, and governments own assets. For a company, an asset might generate revenue, or a company might benefit in some way from owning or using the asset."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "inheritance",
+      "patterns": [
+        "How does inheritance work?",
+        "What are you allowed to inherit",
+        "What happens to propety when a relative dies?"
+      ],
+      "responses": [
+        "An inheritance is a financial term describing the assets passed down to individuals after someone dies.",
+        "nheritance refers to the assets that an individual bequeaths to his or her loved ones after he or she passes away. An inheritance may contain cash, investments such as stocks or bonds, and other assets such as jewelry, automobiles, art, antiques, and real estate.",
+        "In most countries, inheritance assets are subject to inheritance taxes, where beneficiaries may find themselves saddled with tax liabilities."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "certified_financial_planner",
+      "patterns": [
+        "Who should I got for financial advise?",
+        "Where can you find good financial advice?",
+        "What financial planner should I use?"
+      ],
+      "responses": [
+        "The Certified Financial Planner designation is a professional certification mark for financial planners conferred by the Certified Financial Planner Board of Standards in the United States",
+        "Certified Financial Planner (CFP) is a formal recognition of expertise in the areas of financial planning, taxes, insurance, estate planning, and retirement (such as with 401(k)s).",
+        "CFPs help individuals in a variety of areas in managing their finances, such as retirement, investing, education, insurance, and taxes."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "commission",
+      "patterns": [
+        "What is a commission in stocks?",
+        "How do stock brokers make money?",
+        "What makes it expensive to regularly trade stocks?"
+      ],
+      "responses": [
+        "Also called a stock trading fee, this is a brokerage fee that is charged when you buy or sell stocks. You may also pay commissions or fees for buying and selling other investments, like options or exchange-traded funds.",
+        "A brokerage fee is a fee charged by a broker to execute transactions or provide specialized services. Brokers charge brokerage fees for services such as purchases, sales, consultations, negotiations, and delivery.",
+        "Stock commissions fees are charged for a variety of services brokers provide, mostly notably the trading (buying and selling). By regularly selling or buying, the profit spreads are decreased due to the fixed costs the commission causes."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "credit_score",
+      "patterns": [
+        "What is a credit score?",
+        "Why is credit score imporant?",
+        "How does credit score works?"
+      ],
+      "responses": [
+        "A credit score is a numerical expression based on a level analysis of a person's credit files, to represent the creditworthiness of an individual.",
+        "A credit score is a number between 300–850 that depicts a consumer's creditworthiness. The higher the score, the better a borrower looks to potential lenders.",
+        "The credit score model was created by the Fair Isaac Corporation, also known as FICO, and it is used by financial institutions. While other credit-scoring systems exist, the FICO score is by far the most commonly used. There are a number of ways to improve an individual's score, including repaying loans on time and keeping debt low."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "dividends",
+      "patterns": [
+        "What is the benefit from holding stocks for long periods?",
+        "What are dividends?",
+        "How do dividends work?"
+      ],
+      "responses": [
+        "A dividend is a distribution of profits by a corporation to its shareholders. When a corporation earns a profit or surplus, it is able to pay a proportion of the profit as a dividend to shareholders.",
+        "Some public companies offer dividends to their stakholders as a rewards for holding the stock over long periods of time. Its one of the ways investors earn a return from investing in stock.",
+        "Stocks that pay dividends can provide a stable and growing income stream. Investors typically prefer to invest in companies that offer dividends that increase year after year, which helps outpace inflation."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "fed_reserve",
+      "patterns": [
+        "What is the Federal Reserve?",
+        "What is the purpose of the Federal Reserve",
+        "How does the Federal Reserve work?"
+      ],
+      "responses": [
+        "The Federal Reserve System is the central banking system of the United States of America. It was created on December 23, 1913, with the enactment of the Federal Reserve Act, after a series of financial panics led to the desire for central control of the monetary system in order to alleviate financial crises.",
+        "The Federal Reserve System, often referred to as the Federal Reserve or simply 'the Fed,' is the central bank of the United States. It was created by the Congress to provide the nation with a safer, more flexible, and more stable monetary and financial system"
+      ],
+      "context_set": ""
+    }
+  ]
+}
