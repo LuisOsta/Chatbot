@@ -58,4 +58,5 @@ def send_chatbot_response():
 if __name__ == "__main__":
     subprocess.call('clear')
     port = int(os.environ.get("PORT"), 5000)
-    app.run(port=port, threaded=True)
+    print(port)
+    app.run(port=port, threaded=True, debug=True, host="0.0.0.0")
