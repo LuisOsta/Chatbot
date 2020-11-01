@@ -30,22 +30,32 @@ const loadingValue = {
   },
 };
 
+const askForName = {
+  author: "Them",
+  type: "text",
+  data: {
+    text: "What's your  name?",
+  },
+};
+
 const popper = (array = []) => {
   array.pop();
   return array;
 };
 
 function App() {
+  const [name, setName] = useState("");
   const [isOpen, setOpen] = useState(true);
   const [messageList, setMessageList] = useState(initialValues);
 
   const handleOpen = () => {
     setOpen(!isOpen);
   };
+
   const handleMessageSent = async (message) => {
     setMessageList((currentList) => [...currentList, message, loadingValue]);
     const { data } = await axios.post("/chatbot/response", {
-      data: { text: message.data.text },
+      data: { text: message.data.text, name },
       headers: {
         "content-type": "application/json",
       },
@@ -57,10 +67,11 @@ function App() {
         author: "Them",
         type: "text",
         data: {
-          text: data,
+          text: data.text,
         },
       },
     ]);
+    setName(data.name);
   };
   return (
     <div className="App">

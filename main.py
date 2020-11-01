@@ -48,7 +48,9 @@ def send_chatbot_response():
         data = request.get_json()['data']
         question = data['text']
         user_name = data['name'] if "name" in data else ""
-        return get_chatbot_response(question, user_name)
+        answer, name = get_chatbot_response(question, user_name)
+
+        return {"text": answer, "name": name}
     except BadRequest as error:
         print(error)
         return "Error"

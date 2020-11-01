@@ -88,8 +88,8 @@ def create_chatbot(chatbot_model, labels, words, data_file_path):
 
         if tag == "introduction":
             print("Introduction")
-            return get_answer_from_tag(tag, data_file_path) + ", " + user_name
+            return get_answer_from_tag(tag, data_file_path) + ", " + user_name, user_name
         else:
-            return get_answer_from_tag(tag, data_file_path)
+            return get_answer_from_tag(tag, data_file_path), user_name
 
     return get_chatbot_response
