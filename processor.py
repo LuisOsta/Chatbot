@@ -77,4 +77,4 @@ def create_training_data(docs_x, docs_y, stemmed_words, labels):
 
         with open("./data/data.pickle", "wb") as file:
             pickle.dump((training, output), file)
-        return training, output
+        return training, output, stemmed_words, labels

@@ -5,7 +5,6 @@ import json
 import random
 import os.path
 import tflearn
-import tensorflow as tf
 import numpy as np
 from nltk.stem.lancaster import LancasterStemmer
 from nltk import word_tokenize
@@ -81,12 +80,16 @@ def create_chatbot(chatbot_model, labels, words, data_file_path):
     """
         Docstring
     """
-    def get_chatbot_response(question):
+    def get_chatbot_response(question, user_name):
         prediction = chatbot_model.predict(
             [create_bag_of_words(question, words)])
         max_index = np.argmax(prediction)
         tag = labels[max_index]
 
-        return get_answer_from_tag(tag, data_file_path)
+        if tag == "introduction":
+            print("Introduction")
+            return get_answer_from_tag(tag, data_file_path) + ", " + user_name
+        else:
+            return get_answer_from_tag(tag, data_file_path)
 
     return get_chatbot_response

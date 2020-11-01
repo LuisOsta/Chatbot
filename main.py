@@ -45,8 +45,10 @@ def send_chatbot_response():
         Docstring
     """
     try:
-        text = request.get_json()['data']['text']
-        return get_chatbot_response(text)
+        data = request.get_json()['data']
+        question = data['text']
+        user_name = data['name'] if "name" in data else ""
+        return get_chatbot_response(question, user_name)
     except BadRequest as error:
         print(error)
         return "Error"
