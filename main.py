@@ -1,9 +1,9 @@
 """
 Imports
 """
+import os.path
 import tflearn
 import tensorflow as tf
-
 from chat_gui import initialize_chat
 from processor import process_raw_data, create_training_data
 
@@ -28,14 +28,19 @@ def create_network(inputs, output):
 training_data, output_labels = create_training_data(
     *process_raw_data(INTENTS_FILE_PATH))
 
+
 print("Training: ", training_data)
 print("Output: ", output_labels)
 
 
 network = create_network(training_data, output_labels)
 network = tflearn.regression(network)
-
 model = tflearn.DNN(network)
-model.fit(training_data, output_labels, n_epoch=1000,
-          batch_size=8, show_metric=True)
-model.save('model.tflearn')
+
+if os.path.isfile("./model/model.tflearn.index"):
+    model.load("./model/model.tflearn")
+    print("Successfully loaded model.")
+else:
+    model.fit(training_data, output_labels, n_epoch=1000,
+              batch_size=8, show_metric=True)
+    model.save('./model/model.tflearn')

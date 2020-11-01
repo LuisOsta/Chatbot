@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/luisosta/school/CS4395/chatbot/model/model.tflearn"
+all_model_checkpoint_paths: "/home/luisosta/school/CS4395/chatbot/model/model.tflearn"
