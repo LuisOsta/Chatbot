@@ -4,16 +4,10 @@ Imports
 import json
 import pickle
 import numpy as np
-import nltk
 from nltk.stem.lancaster import LancasterStemmer
 from nltk import word_tokenize
 
 stemmer = LancasterStemmer()
-
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt')
 
 
 def process_raw_data(filepath):
