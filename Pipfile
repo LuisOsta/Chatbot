@@ -13,6 +13,7 @@ pylint = "*"
 tensorflow = "==1.15"
 tflearn = "*"
 flask = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.6"
