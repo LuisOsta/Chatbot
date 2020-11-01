@@ -64,7 +64,7 @@ function App() {
         messageList={messageList}
         showEmoji={false}
         isOpen={isOpen}
-        onClick={handleOpen}
+        handleClick={handleOpen}
       />
     </div>
   );
