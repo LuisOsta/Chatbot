@@ -22,6 +22,19 @@ const initialValues = [
   },
 ];
 
+const loadingValue = {
+  author: "Them",
+  type: "text",
+  data: {
+    text: "Thinking...",
+  },
+};
+
+const popper = (array = []) => {
+  array.pop();
+  return array;
+};
+
 function App() {
   const [isOpen, setOpen] = useState(true);
   const [messageList, setMessageList] = useState(initialValues);
@@ -30,6 +43,7 @@ function App() {
     setOpen(!isOpen);
   };
   const handleMessageSent = async (message) => {
+    setMessageList((currentList) => [...currentList, message, loadingValue]);
     const { data } = await axios.post("/chatbot/response", {
       data: { text: message.data.text },
       headers: {
@@ -37,9 +51,8 @@ function App() {
       },
     });
 
-    setMessageList([
-      ...messageList,
-      message,
+    setMessageList((currentList) => [
+      ...popper(currentList),
       {
         author: "Them",
         type: "text",
