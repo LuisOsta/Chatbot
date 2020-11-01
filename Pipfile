@@ -13,6 +13,7 @@ numpy = "*"
 pylint = "*"
 tensorflow = "==1.0.1"
 tflearn = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.6.1"
